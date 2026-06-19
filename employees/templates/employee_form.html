@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Add Employee</h2>
+
+<form method="POST">
+
+    {% csrf_token %}
+
+    <div>
+        <label>Name</label><br>
+        {{ form.name }}
+    </div>
+
+    <br>
+
+    <div>
+        <label>Email</label><br>
+        {{ form.email }}
+    </div>
+
+    <br>
+
+    <div>
+        <label>Phone</label><br>
+        {{ form.phone }}
+    </div>
+
+    <br>
+
+    <div>
+        <label>Designation</label><br>
+        {{ form.designation }}
+    </div>
+
+    <br>
+
+    <div>
+        <label>Salary</label><br>
+        {{ form.salary }}
+    </div>
+
+    <br>
+
+    <div>
+        <label>Department</label><br>
+        {{ form.department }}
+    </div>
+
+    <br>
+
+    <button type="submit"
+            class="btn">
+        Save Employee
+    </button>
+
+</form>
+
+{% endblock %}
